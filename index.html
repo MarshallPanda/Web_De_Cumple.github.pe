@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❤️Cumpleaños❤️</title>
+    <link rel="shortcut icon" href="image/Fron_Logo.png">
+    <!-- Enlace a Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('image/fondo.png'); /* Ruta correcta de la imagen de fondo */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Para ocupar todo el alto de la pantalla */
+            position: relative; /* Para posicionar las imágenes de las esquinas */
+            overflow: hidden; /*Evita barras de desplazamiento*/
+        }
+
+        .titulo {
+            font-size: 80px;
+            font-weight: bold;
+            color: black;
+            text-align: center;
+            letter-spacing: -4px;
+            margin-bottom: 20px;
+        }
+
+        .texto {
+            font-size: 24px;
+            color: black;
+            text-align: center;
+        }
+
+        .boton {
+            font-size: 20px;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #f06, #09f, #f0f);
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .boton:hover {
+            transform: scale(1.1);
+        }
+
+        /* Estilos para las imágenes en las esquinas */
+        .imagen-esquina {
+            position: absolute;
+            width: 100px; /* Tamaño de las imágenes */
+            height: 100px;
+            animation: girar 0s linear infinite; /* Efecto de giro en todas las imágenes */
+        }
+
+        /* Comentario: Imagen de la esquina superior izquierda (L_C.gif) */
+        .imagen-esquina.lc {
+            top: 200px;
+            left: 300px;
+            transform: rotate(15deg);
+        }
+
+        /* Comentario: Imagen de la esquina superior derecha (L_N.gif) */
+        .imagen-esquina.ln {
+            top: 600px;
+            right: 500px;
+            transform: rotate(90deg);
+        }
+
+        /* Comentario: Imagen de la esquina superior izquierda (Mas_A.gif) */
+        .imagen-esquina.masa {
+            top: 700px; /* Mover hacia arriba */
+            right: 1400px; /* Mover hacia la derecha */
+            transform: rotate(45deg);
+        }
+
+        /* Comentario: Imagen de la esquina inferior derecha (Mas_R.gif) */
+        .imagen-esquina.masr {
+            bottom: 800px;
+            right: 700px;
+        }
+
+        @keyframes girar {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Estilos para la sección separada por una línea */
+        .seccion-separada redes-container {
+            width: 100%;
+            max-width: 800px; /* Ancho máximo de la sección */
+            padding: 20px;
+            border-top: 2px solid black; /* Línea superior */
+            border-bottom: 2px solid black; /* Línea inferior */
+            text-align: center;
+            margin-top: 20px; /* Espacio arriba de la sección separada */
+        }
+
+        /* Estilos para los íconos de las redes sociales */
+        .iconos {
+            font-size: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .iconos a {
+            margin-right: 20px; /* Espacio entre los íconos (separación) */
+        }
+
+        /* Estilos para el footer */
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+/*Codifo css de la torta loca*/
+        #goose {
+            position: absolute;
+            width: 100px; /*tamaño de la imagen*/
+            height: auto;
+            pointer-events: none;/*Evitar que interfiera con los eventos de mause*/
+
+        }
+
+        /* Estilos para dispositivos móviles */
+        @media (max-width: 768px) {
+            .titulo {
+                font-size: 36px; /* Cambia el título en celular */
+                margin-bottom: 10px; /* Cambia el espacio inferior del título en  celular */
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+    <img src="image/L_C.gif" alt="L_C" class="imagen-esquina lc">
+    <img src="image/L_N.gif" alt="L_N" class="imagen-esquina ln">
+    <img src="image/Mas_A.gif" alt="Mas_A" class="imagen-esquina masa">
+    <img src="image/Mas_R.gif" alt="Mas_R" class="imagen-esquina masr">
+
+    <div class="titulo">Feliz Cumpleaños</div>
+    <p class="texto">¡Esperamos que tengas un día maravilloso!</p>
+    <button class="boton" onclick="redireccionar()">Haz clic aquí</button>
+
+    <!-- Sección separada por una línea con íconos de Font Awesome -->
+    <div class="sección-separada redes-container">
+        <br><br><br><br>
+        <h2>¡Celebremos juntos!</h2>
+        <p>compartiendo la alegría en las redes:</p>
+        <div class="iconos">
+            <a href="https://github.com/MarshallPanda/Web_De_Cumple.github.pe.git" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=51929586686&text=%C2%A1Feliz%20cumplea%C3%B1os!%0AQue%20disfrutes%20de%20este%20d%C3%ADa%0Acon%20ilusi%C3%B3n%20y%20en%20compa%C3%B1%C3%ADa%0Ade%20las%20personas%20que%20m%C3%A1s%0Aamas%20en%20el%20mundo.%20Que%0Ala%20alegr%C3%ADa%20sea%20constante%20y%20duerme%20hdpm." target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        Derechos de autor &copy; 2023 - Jeimy Pando Alcantara
+    </footer>
+   <!--//PARA QUE SE VA MAS PRO LA REDIRECCION AL HTML XD --> 
+    <script>
+        function redireccionar() {
+            window.location.href = "pagina2.html"; // Reemplaza "pagina2.html" con la direccion que quiera si va modificar el codigo.
+        }
+    </script>
+
+</body>
+</html>
